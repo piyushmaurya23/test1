@@ -1,2 +1,14 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyCharm
+.idea/
+src/.idea/
+
+###
 src/teachadvisor/settings/local.py
 src/teachadvisor/settings/production.py
+
+
