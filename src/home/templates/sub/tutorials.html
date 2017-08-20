@@ -45,35 +45,18 @@
 
 
 {% block content %}
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="col-sm-8 col-sm-offset-2">
 
-                <div class="panel panel-default">
-                    <div class="panel-heading"><h4 class="panel-title"><b>Tutorials</b></h4></div>
-                    <div class="panel-body">
-
-
-                        Please check out our videos on how to use this platform
-
-                        <br>
-                        <br>
-
-
-                    </div>
-                </div>
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h4 class="panel-title"><b>Tutorials</b></h4></div>
+            <div class="panel-body">
+                Please check out our videos on how to use this platform
+                <br>
+                <br>
+                <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal">Open</button>
             </div>
         </div>
-
-
-        <div class="col-sm-6">
-            <video name='tutorial' controls autoplay width='70%' height='auto'>
-                <source src="{% static 'vid/tutorial.mp4' %}" type="video/mp4">
-            </video>
-
-        </div>
     </div>
-
 
 {% endblock %}
 

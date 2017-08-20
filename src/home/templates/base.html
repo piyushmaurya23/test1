@@ -505,7 +505,28 @@ function showFlashMessage(message) {
 
 
 
-
+<!-- The modal section has to be at the very bottom of the site, right before closing body tag -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <div class="embed-responsive embed-responsive-ratio">
+              <video controls id="modalVideo">
+                <source src="{% static 'vid/tutorial.mp4' %}" type="video/mp4">
+                <source src="{% static 'vid/tutorial.mov' %}" type="video/mov">
+              </video>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-md btn-primary" data-dismiss="modal" id="modalClose">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 <!-- Additional services include image uploading for tutors so they can advertise their accomplishments and/or certificates earned. Tracking to idenfify many views and messages their profiles have over time. And advertising to feature their profiles on top of our search. -->
