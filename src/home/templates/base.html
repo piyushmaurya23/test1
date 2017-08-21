@@ -30,8 +30,12 @@
         {% block style %}{% endblock %}
 
         .jumbotron {
-            background-color: #336B87;
-            color: white;
+            background: url('{% static 'img/jumbo-1.jpg' %}');
+            background-position: 0% 25%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        {#            background-color: #336B87;#} color: white;
+            margin-top: 0;
         }
 
         /*      .test {
@@ -142,166 +146,165 @@
 </div>
 
 
-<div class="container">
-    <small>
-        {% block content %}
 
-            {% if not request.user.is_authenticated %}
+{% block content %}
 
-
-                <div class="jumbotron">
-                    <div class="container">
-                        <div class="col-md-9">
-                            <h1>Welcome!</h1>
-                            <h3>Digital Marketplace for Freelance Tutors and Students.</h3>
-                            <!--             <p>FOR FREE!<p> -->
-                            <br>
-                            <a class="btn btn-success" href={% url 'account_signup' %} role="button">Sign Up Here</a>
-                        </div>
+    {% if not request.user.is_authenticated %}
 
 
-                        <div class="col-md-3">
-                            <h1><i class="fa fa-graduation-cap fa-4x" aria-hidden="true"></i></h1>
-                        </div>
-                        <!--           <div class="col-sm-4" style="background-color:black;height:315px;"><iframe width="300" height="315" src="https://www.youtube.com/embed/8r0CiLBM1o8" frameborder="0" allowfullscreen></iframe>
-                                  </div> -->
-                    </div>
+        <div class="jumbotron">
+            <div class="container">
+                <div class="col-md-9">
+                    <h1>Welcome!</h1>
+                    <h3>Digital Marketplace for Freelance Tutors and Students.</h3>
+                    <!--             <p>FOR FREE!<p> -->
+                    <br>
+                    <a class="btn btn-success" href={% url 'account_signup' %} role="button">Sign Up Here</a>
                 </div>
 
 
+                <div class="col-md-3">
+                    <h1><i class="fa fa-graduation-cap fa-4x" aria-hidden="true"></i></h1>
+                </div>
+                <!--           <div class="col-sm-4" style="background-color:black;height:315px;"><iframe width="300" height="315" src="https://www.youtube.com/embed/8r0CiLBM1o8" frameborder="0" allowfullscreen></iframe>
+                          </div> -->
+            </div>
+        </div>
 
 
-                <div class="container">
-                    <!-- Example row of columns -->
-                    <div class="row">
-                        <div class="col-md-3">
-                            <h2>Robust Search <i class="fa fa-search fa-1x" aria-hidden="true"></i></h2>
-                            <p class="fpfont">We feature a easy to use and dynamic search function for you to browse
-                                through our wide ranging database of tutors and tuition jobs available. We feature a
-                                review system that identifies performing tutors to support your needs. </p>
-                            <p><a class="btn btn-default" href="" role="button">Job Search &raquo;</a>
-                                <a class="btn btn-default" href="" role="button">Tutor Search &raquo;</a></p>
-
-                        </div>
-                        <div class="col-md-3">
-                            <h2>Get Hired Quickly <i class="fa fa-bolt fa-1x" aria-hidden="true"></i></h2>
-                            <p class="fpfont">Freelancing tutors who sign up avoid the hassle of maintaining a website
-                                or working through a intermediary. Over here we want to focus on your core expertise.
-                                <b>Tutoring.</b> On this platform you can upload your profile and start getting offers
-                                immediately! </p>
-                            <p><a class="btn btn-default" href="{% url 'account_signup' %}" role="button">Get Hired
-                                &raquo;</a></p>
-                        </div>
-                        <div class="col-md-3">
-                            <h2>Free to Use <i class="fa fa-dollar fa-1x" aria-hidden="true"></i></h2>
-                            <p class="fpfont">Basic services are free. Additional services can be paid with credits that
-                                you can earn by giving and recieving reviews. Additional services provided to tutors
-                                include content management, analytics and advertising.</p>
-                            <p><a class="btn btn-default" href="{% url 'Tutorials' %}" role="button">Watch our Tutorials
-                                &raquo;</a></p>
-                        </div>
-                        <div class="col-md-3">
-                            <h2>Flexible Hiring <i class="fa fa-comments-o fa-1x" aria-hidden="true"></i></h2>
-                            <p class="fpfont">Negotiate on prices and decide on details by getting in directly in
-                                contact with your tutor/student through our built in messaging services. Finalize the
-                                hiring process with a built-in order form to avoid any misunderstanding.</p>
-                            <p><a class="btn btn-default" href="{% url 'account_signup' %}" role="button">Start Hiring
-                                &raquo;</a></p>
-                        </div>
-                    </div>
-
-                    <hr>
 
 
-                    <!--       <nav class="navbar navbar-default test"> -->
-
-                    <div class="container">
-
-                        <footer>
-
-                            <div class="col-md-3">
-                                <p><b> About </b></p>
-                                <p><a href='{% url 'AboutUs' %}'>Our Mission</a></p>
-                                <p><a href='{% url 'Careers' %}'>Careers</a></p>
-                                <p><a href='{% url 'Press' %}'>Press</a></p>
-                                <p><a href='{% url 'Partnership' %}'>Partnerships</a></p>
-                            </div>
-
-                            <div class="col-md-3">
-                                <p><b> Support </b></p>
-                                <p><a href='{% url 'FAQTutor' %}'>FAQ for Tutors</a></p>
-                                <p><a href='{% url 'FAQStudent' %}'>FAQ for Students</a></p>
-                                <p><a href='{% url 'Customer_Support' %}'>Customer Support</a></p>
-                                <p><a href='{% url 'Tutorials' %}'>Tutorials</a></p>
-                            </div>
-
-                            <div class="col-md-3">
-                                <p><b> Legal </b></p>
-                                <p><a href='{% url 'TermsAndCondition' %}'>Terms and Conditions</a></p>
-                                <p><a href='{% url 'PrivacyPolicy' %}'>Privacy Policy</a></p>
-                                <p><a href='{% url 'Disclaimer' %}'>Disclaimer</a></p>
-                                <p><a href='{% url 'RefundPolicy' %}'>Refund Policy</a></p>
-                            </div>
-
-                            <div class="col-md-3">
-                                <p><b> Community </b></p>
-                                <p class="text-muted">Blog</p>
-                                <p class="text-muted">Forum</p>
-                                <p class="text-muted">Affiliates</p>
-                            </div>
-
-                            <div class="row"></div>
-
-                            <br>
-
-                            <p>&copy; Powered by Balance Tech Private Limited.</p>
-
-                    </div>
-
-                    </footer>
-
-                </div> <!-- /container -->
-
-                <!--   </nav> -->
+        <div id="features">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="col-md-3">
+                    <h2>Robust Search <i class="fa fa-search fa-1x" aria-hidden="true"></i></h2>
+                    <p class="fpfont">We feature a easy to use and dynamic search function for you to browse
+                        through our wide ranging database of tutors and tuition jobs available. We feature a
+                        review system that identifies performing tutors to support your needs. </p>
+                    <p><a class="btn btn-default" href="" role="button">Job Search &raquo;</a>
+                        <a class="btn btn-default" href="" role="button">Tutor Search &raquo;</a></p>
 
                 </div>
+                <div class="col-md-3">
+                    <h2>Get Hired Quickly <i class="fa fa-bolt fa-1x" aria-hidden="true"></i></h2>
+                    <p class="fpfont">Freelancing tutors who sign up avoid the hassle of maintaining a website
+                        or working through a intermediary. Over here we want to focus on your core expertise.
+                        <b>Tutoring.</b> On this platform you can upload your profile and start getting offers
+                        immediately! </p>
+                    <p><a class="btn btn-default" href="{% url 'account_signup' %}" role="button">Get Hired
+                        &raquo;</a></p>
+                </div>
+                <div class="col-md-3">
+                    <h2>Free to Use <i class="fa fa-dollar fa-1x" aria-hidden="true"></i></h2>
+                    <p class="fpfont">Basic services are free. Additional services can be paid with credits that
+                        you can earn by giving and recieving reviews. Additional services provided to tutors
+                        include content management, analytics and advertising.</p>
+                    <p><a class="btn btn-default" href="{% url 'Tutorials' %}" role="button">Watch our Tutorials
+                        &raquo;</a></p>
+                </div>
+                <div class="col-md-3">
+                    <h2>Flexible Hiring <i class="fa fa-comments-o fa-1x" aria-hidden="true"></i></h2>
+                    <p class="fpfont">Negotiate on prices and decide on details by getting in directly in
+                        contact with your tutor/student through our built in messaging services. Finalize the
+                        hiring process with a built-in order form to avoid any misunderstanding.</p>
+                    <p><a class="btn btn-default" href="{% url 'account_signup' %}" role="button">Start Hiring
+                        &raquo;</a></p>
+                </div>
+            </div>
+
+            <hr>
+
+
+            <!--       <nav class="navbar navbar-default test"> -->
+
+            <div class="container">
+
+                <footer>
+
+                    <div class="col-md-3">
+                        <p><b> About </b></p>
+                        <p><a href='{% url 'AboutUs' %}'>Our Mission</a></p>
+                        <p><a href='{% url 'Careers' %}'>Careers</a></p>
+                        <p><a href='{% url 'Press' %}'>Press</a></p>
+                        <p><a href='{% url 'Partnership' %}'>Partnerships</a></p>
+                    </div>
+
+                    <div class="col-md-3">
+                        <p><b> Support </b></p>
+                        <p><a href='{% url 'FAQTutor' %}'>FAQ for Tutors</a></p>
+                        <p><a href='{% url 'FAQStudent' %}'>FAQ for Students</a></p>
+                        <p><a href='{% url 'Customer_Support' %}'>Customer Support</a></p>
+                        <p><a href='{% url 'Tutorials' %}'>Tutorials</a></p>
+                    </div>
+
+                    <div class="col-md-3">
+                        <p><b> Legal </b></p>
+                        <p><a href='{% url 'TermsAndCondition' %}'>Terms and Conditions</a></p>
+                        <p><a href='{% url 'PrivacyPolicy' %}'>Privacy Policy</a></p>
+                        <p><a href='{% url 'Disclaimer' %}'>Disclaimer</a></p>
+                        <p><a href='{% url 'RefundPolicy' %}'>Refund Policy</a></p>
+                    </div>
+
+                    <div class="col-md-3">
+                        <p><b> Community </b></p>
+                        <p class="text-muted">Blog</p>
+                        <p class="text-muted">Forum</p>
+                        <p class="text-muted">Affiliates</p>
+                    </div>
+
+                    <div class="row"></div>
+
+                    <br>
+
+                    <p>&copy; Powered by Balance Tech Private Limited.</p>
+
+            </div>
+
+            </footer>
+
+        </div> <!-- /container -->
+
+        <!--   </nav> -->
+
+        </div>
 
 
 
 
+
+    {% else %}
+
+
+        <div class='col-sm-8 col-sm-offset-2'>
+            <h3>Welcome {{ request.user }}</h3>
+            <b>You are logged in</b>
+
+            <br>
+            <br>
+
+            {% if not request.user.teacher.function and not request.user.student.function and not request.get_full_path == "/teacher/add/" and not request.get_full_path == "/student/add/" and not request.get_full_path == "/termsandconditions/" and not request.get_full_path == "/privacypolicy/" and not request.get_full_path == "/disclaimer/" %}
+
+                <br>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading"><b>Please select below to complete your profile before you can
+                        hire/apply.</b></div>
+                    <div class="panel-body">
+                        <br>
+                        <a href='{% url "TeacherCreate" %}' data-action='show-spinner'
+                           class='buttonspace btn btn-success btn-block'>Tutors click here</a>
+                    </div>
+                    <div class="panel-body">
+                        <a href='{% url "StudentCreate" %}' data-action='show-spinner'
+                           class='buttonspace btn btn-success btn-block'>Students click here</a>
+                    </div>
+                </div>
 
             {% else %}
 
 
-                <div class='col-sm-8 col-sm-offset-2'>
-                    <h3>Welcome {{ request.user }}</h3>
-                    <b>You are logged in</b>
-
-                    <br>
-                    <br>
-
-                    {% if not request.user.teacher.function and not request.user.student.function and not request.get_full_path == "/teacher/add/" and not request.get_full_path == "/student/add/" and not request.get_full_path == "/termsandconditions/" and not request.get_full_path == "/privacypolicy/" and not request.get_full_path == "/disclaimer/" %}
-
-                        <br>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading"><b>Please select below to complete your profile before you can
-                                hire/apply.</b></div>
-                            <div class="panel-body">
-                                <br>
-                                <a href='{% url "TeacherCreate" %}' data-action='show-spinner'
-                                   class='buttonspace btn btn-success btn-block'>Tutors click here</a>
-                            </div>
-                            <div class="panel-body">
-                                <a href='{% url "StudentCreate" %}' data-action='show-spinner'
-                                   class='buttonspace btn btn-success btn-block'>Students click here</a>
-                            </div>
-                        </div>
-
-                    {% else %}
-
-
-                        {% block special %}
+                {% block special %}
 
 
 
@@ -311,19 +314,18 @@
 
 
 
-                        {% endblock %}
-
-                    {% endif %}
-                </div>
+                {% endblock %}
 
             {% endif %}
+        </div>
+
+    {% endif %}
 
 
 
-            </small>
-        {% endblock %}
+    </small>
+{% endblock %}
 
-</div> <!-- /container -->
 
 
 {% include "javascript.html" %}

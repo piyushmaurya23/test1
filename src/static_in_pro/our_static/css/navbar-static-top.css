@@ -15,7 +15,7 @@ body {
 
 .navbar-pre-expand{
   height: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   position: relative; 
 /*  -webkit-transition: height 0.35s ease;
   -moz-transition: height 0.35s ease;
