@@ -171,7 +171,7 @@ WSGI_APPLICATION = 'teachadvisor.wsgi.application'
 # }
 
 # confidential
-# localhost - need to install postgres under pip install and start a new database in the
+# # localhost - need to install postgres under pip install and start a new database in the
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
