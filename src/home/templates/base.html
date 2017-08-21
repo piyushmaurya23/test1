@@ -44,7 +44,6 @@
 
         }
 
-
         /*      .test {
                 color: white;
                 padding:20px 20px 20px 20px;
@@ -63,7 +62,7 @@
         .fa-lg {
             color: #336B87;
         }
-        
+
         .feature-heading {
             color: #336B87;
         }
@@ -180,9 +179,9 @@
                 </div>
 
 
-{#                <div class="col-md-3">#}
-{#                    <h1><i class="fa fa-graduation-cap fa-4x" aria-hidden="true"></i></h1>#}
-{#                </div>#}
+                {#                <div class="col-md-3">#}
+                {#                    <h1><i class="fa fa-graduation-cap fa-4x" aria-hidden="true"></i></h1>#}
+                {#                </div>#}
                 <!--           <div class="col-sm-4" style="background-color:black;height:315px;"><iframe width="300" height="315" src="https://www.youtube.com/embed/8r0CiLBM1o8" frameborder="0" allowfullscreen></iframe>
                           </div> -->
             </div>
@@ -195,21 +194,28 @@
         <!-- Example row of columns -->
 
         <h1 align="center"><b>Our top Offerings</b></h1>
-        <br>
+
         <div class="container">
+
             <div class="row">
                 <div class="col-md-3">
+                    <br>
                     <h1 align="center"><i class="fa fa-search fa-lg" aria-hidden="true"></i></h1>
                     <h2 align="center" class="feature-heading">Robust Search </h2>
                     <br>
                     <p class="fpfont">We feature a easy to use and dynamic search function for you to browse
                         through our wide ranging database of tutors and tuition jobs available. We feature a
                         review system that identifies performing tutors to support your needs. </p>
-                    <p><a class="btn btn-primary" href="" role="button">Job Search &raquo;</a>
-                        <a class="btn btn-primary" href="" role="button">Tutor Search &raquo;</a></p>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <a class="btn btn-primary btn-block" href="" role="button">Job Search &raquo;</a></div>
+                        <div class="col-xs-6">
+                            <a class="btn btn-primary btn-block" href="" role="button">Tutor Search &raquo;</a></div>
+                    </div>
 
                 </div>
                 <div class="col-md-3">
+                    <br>
                     <h1 align="center"><i class="fa fa-bolt fa-lg" aria-hidden="true"></i></h1>
                     <h2 align="center" class="feature-heading">Get Hired Quickly</h2>
                     <br>
@@ -217,28 +223,32 @@
                         or working through a intermediary. Over here we want to focus on your core expertise.
                         <b>Tutoring.</b> On this platform you can upload your profile and start getting offers
                         immediately! </p>
-                    <p><a class="btn btn-primary" href="{% url 'account_signup' %}" role="button">Get Hired
-                        &raquo;</a></p>
+                    <a class="btn btn-primary btn-block" href="{% url 'account_signup' %}" role="button">Get Hired
+                        &raquo;</a>
                 </div>
                 <div class="col-md-3">
+                    <br>
                     <h1 align="center"><i class="fa fa-dollar fa-lg" aria-hidden="true"></i></h1>
                     <h2 align="center" class="feature-heading">Free to Use</h2>
                     <br>
                     <p class="fpfont">Basic services are free. Additional services can be paid with credits that
                         you can earn by giving and recieving reviews. Additional services provided to tutors
                         include content management, analytics and advertising.</p>
-                    <p><a class="btn btn-primary" href="{% url 'Tutorials' %}" role="button">Watch our Tutorials
-                        &raquo;</a></p>
+                    <br>
+                    <a class="btn btn-primary btn-block" href="{% url 'Tutorials' %}" role="button">Watch our Tutorials
+                        &raquo;</a>
                 </div>
                 <div class="col-md-3">
+                    <br>
                     <h1 align="center"><i class="fa fa-users fa-lg" aria-hidden="true"></i></h1>
                     <h2 align="center" class="feature-heading">Flexible Hiring</h2>
                     <br>
                     <p class="fpfont">Negotiate on prices and decide on details by getting in directly in
                         contact with your tutor/student through our built in messaging services. Finalize the
                         hiring process with a built-in order form to avoid any misunderstanding.</p>
-                    <p><a class="btn btn-primary" href="{% url 'account_signup' %}" role="button">Start Hiring
-                        &raquo;</a></p>
+                    <br>
+                    <a class="btn btn-primary btn-block" href="{% url 'account_signup' %}" role="button">Start Hiring
+                        &raquo;</a>
                 </div>
 
             </div>
