@@ -72,10 +72,9 @@
                     <h4 class="modal-title">Tutorial Video</h4>
                 </div>
                 <div class="modal-body">
-                    <video id="tutorialVideo" controls width="65%" >
+                    <video id="tutorialVideo" controls width="auto">
                         <source src="{% static 'vid/tutorial.mp4' %}" type="video/mp4">
                         <source src="{% static 'vid/tutorial.mov' %}" type="video/mov">
-
                     </video>
                 </div>
             </div>
@@ -84,4 +83,11 @@
 
 {% endblock %}
 
-
+{% block jquery %}
+$('#myModal').on('shown.bs.modal', function () {
+  $('#tutorialVideo')[0].play();
+})
+$('#myModal').on('hidden.bs.modal', function () {
+  $('#tutorialVideo')[0].pause();
+})
+{% endblock %}
