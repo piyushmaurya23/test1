@@ -30,7 +30,7 @@
         {% block style %}{% endblock %}
 
         .jumbotron {
-            background: url('{% static 'img/jumbo-1.jpg' %}');
+            background: url('{% static 'img/banner.png' %}');
             background-position: 0% 25%;
             background-size: cover;
             background-repeat: no-repeat;
@@ -42,6 +42,10 @@
             background-color: lightgray;
             padding-bottom: 8px;
 
+        }
+
+        .cover-text {
+            color: #F3FF00;
         }
 
         /*      .test {
@@ -170,8 +174,8 @@
             <div class="container">
                 <div class="col-md-10 col-md-offset-1">
                     <br>
-                    <h1>Welcome!</h1>
-                    <h3>Digital Marketplace for Freelance Tutors and Students.</h3>
+                    <h1 style="color: yellow;">Welcome!</h1>
+                    <h3 style="color: yellow;">Digital Marketplace for Freelance Tutors and Students.</h3>
                     <!--             <p>FOR FREE!<p> -->
                     <br><br>
                     <a class="btn btn-success" href={% url 'account_signup' %} role="button">Sign Up Here</a>
