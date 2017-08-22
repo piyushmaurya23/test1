@@ -34,7 +34,6 @@
             background-position: 0% 25%;
             background-size: cover;
             background-repeat: no-repeat;
-        {#            background-color: #336B87;#} color: white;
             margin-top: 0;
         }
 
@@ -44,6 +43,10 @@
 
         }
 
+        .btn-manual {
+            background-color: #336B87;
+            color: white;
+        }
 
         /*      .test {
                 color: white;
@@ -169,14 +172,16 @@
 
         <div class="jumbotron">
             <div class="container">
-                <div class="col-md-10 col-md-offset-1">
-                    <br>
-                    <h1 style="color: #336B87;">Welcome!</h1>
-                    <h3 style="color: #336B87;">Digital Marketplace for Freelance Tutors and Students.</h3>
-                    <!--             <p>FOR FREE!<p> -->
-                    <br><br>
-                    <a class="btn btn-success" href={% url 'account_signup' %} role="button">Sign Up Here</a>
-                    <br><br><br>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <br>
+                        <h1 style="color: #336B87;">Welcome!</h1>
+                        <h3 style="color: #336B87;">Digital Marketplace for Freelance Tutors and Students.</h3>
+                        <!--             <p>FOR FREE!<p> -->
+                        <br><br>
+                        <a class="btn btn-manual" href={% url 'account_signup' %} role="button">Sign Up Here</a>
+                        <br><br><br>
+                    </div>
                 </div>
 
 
@@ -204,7 +209,8 @@
                     <h1 align="center"><i class="fa fa-search fa-lg" aria-hidden="true"></i></h1>
                     <h2 align="center" class="feature-heading">Robust Search </h2>
                     <br>
-                    <p class="fpfont text-justify">We feature a easy to use and dynamic search function for you to browse
+                    <p class="fpfont text-justify">We feature a easy to use and dynamic search function for you to
+                        browse
                         through our wide ranging database of tutors and tuition jobs available. We feature a
                         review system that identifies performing tutors to support your needs. </p>
                     <div class="row">
@@ -220,7 +226,8 @@
                     <h1 align="center"><i class="fa fa-bolt fa-lg" aria-hidden="true"></i></h1>
                     <h2 align="center" class="feature-heading">Get Hired Quickly</h2>
                     <br>
-                    <p class="fpfont text-justify">Freelancing tutors who sign up avoid the hassle of maintaining a website
+                    <p class="fpfont text-justify">Freelancing tutors who sign up avoid the hassle of maintaining a
+                        website
                         or working through a intermediary. Over here we want to focus on your core expertise.
                         <b>Tutoring.</b> On this platform you can upload your profile and start getting offers
                         immediately! </p>
@@ -232,7 +239,8 @@
                     <h1 align="center"><i class="fa fa-dollar fa-lg" aria-hidden="true"></i></h1>
                     <h2 align="center" class="feature-heading">Free to Use</h2>
                     <br>
-                    <p class="fpfont text-justify">Basic services are free. Additional services can be paid with credits that
+                    <p class="fpfont text-justify">Basic services are free. Additional services can be paid with credits
+                        that
                         you can earn by giving and recieving reviews. Additional services provided to tutors
                         include content management, analytics and advertising.</p>
                     <br>
