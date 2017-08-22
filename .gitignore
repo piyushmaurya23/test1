@@ -7,6 +7,10 @@ __pycache__/
 .idea/
 src/.idea/
 
+# BD sqlite
+db.sqlite3
+db.sqlite
+
 ###
 src/teachadvisor/settings/local.py
 src/teachadvisor/settings/production.py
