@@ -4,19 +4,22 @@ body {
 
 
 .navbar-default {
-  border-radius: 0px;
+  /*border-radius: 0px;*/
   background-color: #336B87;
 /*  border-color: #1A5F23;*/
   position: fixed;
   right: 0;
   left: 0;
   z-index: 1030;
+  border: none;
+  box-shadow: none;
 }
 
 .navbar-pre-expand{
   height: 50px;
   margin-bottom: 0px;
-  position: relative; 
+  position: relative;
+  border: none;
 /*  -webkit-transition: height 0.35s ease;
   -moz-transition: height 0.35s ease;
   -o-transition: height 0.35s ease;
@@ -25,6 +28,8 @@ body {
 
 .navbar-fixed-top .navbar-collapse {
   max-height: 100%;
+  border: none;
+  box-shadow: none;
 }
 
 .navbar-form {
@@ -56,6 +61,7 @@ margin-left: 0px;
 .navbar-default .navbar-brand {
 /*  color: #000000;*/
   color: white;
+
 }
 
 .navbar-default .navbar-brand:hover {
